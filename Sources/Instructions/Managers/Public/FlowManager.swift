@@ -50,7 +50,7 @@ public class FlowManager {
     private var canShowCoachMark = true
 
     /// The index (in `coachMarks`) of the coach mark being currently displayed.
-    internal var currentIndex = -1
+    public var currentIndex = -1
 
     init(coachMarksViewController: CoachMarksViewController) {
         self.coachMarksViewController = coachMarksViewController
@@ -113,7 +113,7 @@ public class FlowManager {
         }
     }
 
-    internal func showNextCoachMark(hidePrevious: Bool = true) {
+    public func showNextCoachMark(hidePrevious: Bool = true) {
         if disableFlow || isPaused || !canShowCoachMark { return }
 
         let previousIndex = currentIndex
