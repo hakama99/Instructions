@@ -3,7 +3,7 @@
 
 import UIKit
 
-class CoachMarkBodyBackgroundView: UIView,
+open class CoachMarkBodyBackgroundView: UIView,
                                    CoachMarkBodyBackgroundStyle,
                                    CoachMarkComponent {
     // MARK: Private Constants
@@ -68,7 +68,7 @@ class CoachMarkBodyBackgroundView: UIView,
     }
 
     // MARK: Internal Methods
-    func updateValues(from bodyBackground: CoachMarkBodyBackgroundStyle) {
+    public func updateValues(from bodyBackground: CoachMarkBodyBackgroundStyle) {
         borderColor = bodyBackground.borderColor
         innerColor = bodyBackground.innerColor
         highlightedBorderColor = bodyBackground.highlightedBorderColor

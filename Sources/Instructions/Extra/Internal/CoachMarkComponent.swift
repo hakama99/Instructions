@@ -3,12 +3,12 @@
 
 import UIKit
 
-protocol CoachMarkComponent {
+public protocol CoachMarkComponent {
     var frame: CGRect { get set }
 }
 
 extension CoachMarkComponent {
-    func makeInnerTrianglePath(orientation: CoachMarkArrowOrientation) -> CGPath {
+    public func makeInnerTrianglePath(orientation: CoachMarkArrowOrientation) -> CGPath {
         let path = CGMutablePath()
 
         if orientation == .top {
@@ -26,7 +26,7 @@ extension CoachMarkComponent {
         return path
     }
 
-    func makeOuterTrianglePath(orientation: CoachMarkArrowOrientation) -> CGPath {
+    public func makeOuterTrianglePath(orientation: CoachMarkArrowOrientation) -> CGPath {
         let path = CGMutablePath()
 
         if orientation == .top {

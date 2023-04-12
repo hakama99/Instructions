@@ -8,8 +8,8 @@ struct Constants {
     static let coachMarkFadeAnimationDuration: TimeInterval = 0.3
 }
 
-struct InstructionsColor {
-    static let overlay: UIColor = {
+public struct InstructionsColor {
+    public static let overlay: UIColor = {
         let defaultColor = #colorLiteral(red: 0.9098039216, green: 0.9098039216, blue: 0.9098039216, alpha: 0.65)
 
         if #available(iOS 13.0, *) {
@@ -25,7 +25,7 @@ struct InstructionsColor {
         }
     }()
 
-    static let coachMarkInner: UIColor = {
+    public static let coachMarkInner: UIColor = {
         if #available(iOS 13.0, *) {
             return UIColor { (traits) -> UIColor in
                 if traits.userInterfaceStyle == .dark {
@@ -40,7 +40,7 @@ struct InstructionsColor {
         }
     }()
 
-    static let coachMarkHighlightedInner: UIColor = {
+    public static let coachMarkHighlightedInner: UIColor = {
         let defaultColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1)
 
         if #available(iOS 13.0, *) {
@@ -57,7 +57,7 @@ struct InstructionsColor {
         }
     }()
 
-    static let coachMarkOuter: UIColor = {
+    public static let coachMarkOuter: UIColor = {
         let defaultColor = #colorLiteral(red: 0.8901960784, green: 0.8901960784, blue: 0.8901960784, alpha: 1)
 
         if #available(iOS 13.0, *) {
@@ -73,7 +73,7 @@ struct InstructionsColor {
         }
     }()
 
-    static let coachMarkLabel: UIColor = {
+    public static let coachMarkLabel: UIColor = {
         let defaultColor = #colorLiteral(red: 0.1333333333, green: 0.1333333333, blue: 0.1333333333, alpha: 1)
 
         if #available(iOS 13.0, *) {

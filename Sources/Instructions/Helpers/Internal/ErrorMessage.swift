@@ -3,7 +3,7 @@
 
 import Foundation
 
-struct ErrorMessage {
+public struct ErrorMessage {
     struct Info {
         static let nilPointOfInterestZeroOffset =
             "[INFO] The point of interest is nil, offset will be zero."
@@ -70,14 +70,14 @@ struct ErrorMessage {
             """
     }
 
-    struct Fatal {
-        static let negativeNumberOfCoachMarks =
+    public struct Fatal {
+        public static let negativeNumberOfCoachMarks =
             "dataSource.numberOfCoachMarks(for:) returned a negative number."
 
-        static let windowContextNotAvailableInAppExtensions =
+        public static let windowContextNotAvailableInAppExtensions =
             "PresentationContext.newWindow(above:) is not available in App Extensions."
 
-        static let doesNotSupportNSCoding =
+        public static let doesNotSupportNSCoding =
             "This class does not support NSCoding."
     }
 }

@@ -3,14 +3,14 @@
 
 import UIKit
 
-internal extension UIView {
+extension UIView {
 
-    var isOutOfSuperview: Bool {
+    public var isOutOfSuperview: Bool {
         let insets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return isOutOfSuperview(consideringInsets: insets)
     }
 
-    func isOutOfSuperview(consideringInsets insets: UIEdgeInsets) -> Bool {
+    public func isOutOfSuperview(consideringInsets insets: UIEdgeInsets) -> Bool {
         guard let superview = self.superview else {
             return true
         }
@@ -26,7 +26,7 @@ internal extension UIView {
         return !isInBounds
     }
 
-    func fillSuperview(insets: UIEdgeInsets) {
+    public func fillSuperview(insets: UIEdgeInsets) {
         guard let superview = superview else {
             print(ErrorMessage.Warning.noParent)
             return
@@ -40,20 +40,20 @@ internal extension UIView {
         ])
     }
 
-    func fillSuperview() {
+    public func fillSuperview() {
         fillSuperviewVertically()
         fillSuperviewHorizontally()
     }
 
-    func fillSuperviewVertically() {
+    public func fillSuperviewVertically() {
         NSLayoutConstraint.activate(makeConstraintToFillSuperviewVertically())
     }
 
-    func fillSuperviewHorizontally() {
+    public func fillSuperviewHorizontally() {
         NSLayoutConstraint.activate(makeConstraintToFillSuperviewHorizontally())
     }
 
-    func makeConstraintToFillSuperviewVertically() -> [NSLayoutConstraint] {
+    public func makeConstraintToFillSuperviewVertically() -> [NSLayoutConstraint] {
         guard let superview = superview else {
             print(ErrorMessage.Warning.noParent)
             return []
@@ -65,7 +65,7 @@ internal extension UIView {
         ]
     }
 
-    func makeConstraintToFillSuperviewHorizontally() -> [NSLayoutConstraint] {
+    public func makeConstraintToFillSuperviewHorizontally() -> [NSLayoutConstraint] {
         guard let superview = superview else {
             print(ErrorMessage.Warning.noParent)
             return []
@@ -77,7 +77,7 @@ internal extension UIView {
         ]
     }
 
-    func preparedForAutoLayout() -> Self {
+    public func preparedForAutoLayout() -> Self {
         translatesAutoresizingMaskIntoConstraints = false
 
         return self

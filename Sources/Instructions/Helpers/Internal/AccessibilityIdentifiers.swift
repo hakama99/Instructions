@@ -3,13 +3,13 @@
 
 import Foundation
 
-struct AccessibilityIdentifiers {
-    static let coachMarkNext = "AccessibilityIdentifiers.coachMarkNext"
-    static let coachMarkHint = "AccessibilityIdentifiers.coachMarkHint"
-    static let coachMarkBody = "AccessibilityIdentifiers.coachMarkBody"
+public struct AccessibilityIdentifiers {
+    public static let coachMarkNext = "AccessibilityIdentifiers.coachMarkNext"
+    public static let coachMarkHint = "AccessibilityIdentifiers.coachMarkHint"
+    public static let coachMarkBody = "AccessibilityIdentifiers.coachMarkBody"
 
-    static let skipButton = "AccessibilityIdentifiers.skipButton"
-    static let overlayView = "AccessibilityIdentifiers.overlayView"
+    public static let skipButton = "AccessibilityIdentifiers.skipButton"
+    public static let overlayView = "AccessibilityIdentifiers.overlayView"
 
-    static let window = "AccessibilityIdentifiers.window"
+    public static let window = "AccessibilityIdentifiers.window"
 }
